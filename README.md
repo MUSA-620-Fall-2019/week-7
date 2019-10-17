@@ -1,6 +1,6 @@
 # Week 7<br>Analyzing and Visualizing Large Datasets
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MUSA-620-Fall-2019/week-7/master?filepath=lecture-7.ipynb)
+**Note:** Binder has **very** limitied memory resources, so these large datasets won't work — you'll need to run the notebook on your local laptop.
 
 ## New Packages
 

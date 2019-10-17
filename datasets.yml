@@ -1,0 +1,34 @@
+sources:
+  nyc_taxi_wide:
+    driver: parquet
+    cache:
+      - argkey: urlpath
+        regex: "datashader-data"
+        type: file
+    args:
+      urlpath: "https://s3.amazonaws.com/datashader-data/nyc_taxi_wide.parq"
+      engine: "fastparquet"
+
+  census:
+    driver: parquet
+    cache:
+      - type: compressed
+        decomp: zip
+        argkey: urlpath
+        regex: "datashader-data"
+        regex_filter: ".parq[/]?$"
+    args:
+      urlpath: "http://s3.amazonaws.com/datashader-data/census2010.parq.zip"
+      engine: "fastparquet"
+
+  osm:
+    driver: parquet
+    cache:
+      - type: compressed
+        decomp: zip
+        argkey: urlpath
+        regex: "datashader-data"
+        regex_filter: ".parq[/]?$"
+    args:
+      urlpath: "http://s3.amazonaws.com/datashader-data/osm-1billion.parq.zip"
+      engine: "fastparquet"
